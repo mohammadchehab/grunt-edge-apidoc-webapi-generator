@@ -1,4 +1,4 @@
-﻿namespace ApiDoc.WebApiCore
+﻿namespace ApiDoc.WebApi
 {
     using System;
     using System.Collections.Generic;
@@ -7,7 +7,7 @@
     using System.Linq;
     using System.Dynamic;
     using System.Web.Http;
-    using ApiDoc.WebApiCore;
+    using ApiDoc.WebApi;
 
     /// <summary>
     /// Helper Class for marshaling webapi controllers attributes from C# web nodejs via Edge.
