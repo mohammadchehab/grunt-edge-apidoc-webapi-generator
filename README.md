@@ -1,7 +1,4 @@
-Microsoft WebAPI Controller / APIDoc Generator.
-
-I created this tool just to make it easier for me to generate API Documentation when i changed the source code inside my controllers.
-You can simply type "grunt" in your console and Boom the api documentation will get generated.
+#Microsoft WebAPI APIDOC Generator using Grunt and Node Edge
 
 Important :
  - Make sure you modify the package_info.js file in the apidoc/module folder I added the modifed file in the ApiDoc.GruntParser folder.
