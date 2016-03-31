@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 
     //package
     var configuration = grunt.file.readJSON('package.json');
-    var host = configuration.config.currentEnvironment || "local";
+    var host = configuration.config.currentEnvironment || "debug";
     var packages = {};
 
     var typeFinder = edge.func({
