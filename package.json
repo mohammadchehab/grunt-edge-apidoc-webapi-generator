@@ -4,7 +4,7 @@
     "description":  "Iterates the webapi controllers and generates the required api documentation and publish them to the configured server",
     "repository": {
         "type": "git",
-        "url": "git@github.com:chehabz/webapi-apidoc-generator-grunt.git"
+        "url": "git@github.com:chehabz/grunt-edge-apidoc-webapi-generator.git"
     },
     "author": {
         "name": "Mohammad Chehab",
