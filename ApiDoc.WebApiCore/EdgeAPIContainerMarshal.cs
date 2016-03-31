@@ -14,7 +14,7 @@
     /// </summary>
     public class EdgeAPIContainerMarshal
     {
-        public async Task<object> GeneratePackages()
+        public async Task<object> GeneratePackages(dynamic input)
         {
 
             try

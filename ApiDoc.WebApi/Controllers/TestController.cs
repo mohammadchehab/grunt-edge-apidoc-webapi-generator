@@ -1,6 +1,6 @@
 ﻿namespace ApiDoc.WebApi.Controllers
 {
-    using ApiDoc.WebApiCore;
+    using ApiDoc.WebApi;
     using System.Web.Http;
 
     [RoutePrefix("api/test")]

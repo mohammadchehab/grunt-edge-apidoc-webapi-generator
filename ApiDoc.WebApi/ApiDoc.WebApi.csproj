@@ -77,15 +77,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="APIContainerDiscriptor.cs" />
     <Compile Include="Controllers\BaseApiController.cs" />
     <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="EdgeAPIContainerMarshal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ApiDoc.WebApiCore\ApiDoc.WebApiCore.csproj">
-      <Project>{3e673973-16aa-49d6-a37a-f2716a0b4596}</Project>
-      <Name>ApiDoc.WebApiCore</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

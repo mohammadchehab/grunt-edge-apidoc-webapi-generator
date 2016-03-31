@@ -24,18 +24,18 @@ module.exports = function(grunt) {
     var packages = {};
 
     var typeFinder = edge.func({
-        assemblyFile: '../ApiDoc.WebApiCore/bin/debug/ApiDoc.WebApiCore.dll',
-        typeName: 'ApiDoc.WebApiCore.EdgeAPIContainerMarshal',
+        assemblyFile: '../ApiDoc.WebApi/bin/ApiDoc.WebApi.dll',
+        typeName: 'ApiDoc.WebApi.EdgeAPIContainerMarshal',
         methodName: 'GeneratePackages',
     });
 
-    typeFinder(null, function(error, result) {
-        result.forEach(function(it) {
+    typeFinder(null, function (error, result) {
+        result.forEach(function (it) {
             var key = it.key;
             delete it.key;
             packages[key] = it;
         });
-    })
+    });
 
     for (var app in packages)
         distFolders.push(host + "/" + app + "/dist");
@@ -47,7 +47,7 @@ module.exports = function(grunt) {
     grunt.registerTask('mk-history', 'Creating History files from the original controller', function() {
         for (var app in packages) {
             var options = packages[app];
-            var csharpControllerPath = format("path/to/api/controllers/{0}.cs", options.controller);
+            var csharpControllerPath = format("../apidoc.webapi/controllers/{0}.cs", options.controller);
             //create a copy of the controller
             grunt.file.copy(csharpControllerPath, host + "/" + app + "/controller/" + options.version + ".cs", ioOptions);
             //parse the file and replace all @apiVersion with the value of the current api version
