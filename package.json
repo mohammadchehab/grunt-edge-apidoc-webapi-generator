@@ -1,0 +1,30 @@
+﻿{
+    "name" : "webapi-controller-doc-generator",
+    "version" : "1.0.0",
+    "description":  "Iterates the webapi controllers and generates the required api documentation and publish them to the configured server",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:chehabz/webapi-apidoc-generator-grunt.git"
+    },
+    "author": {
+        "name": "Mohammad Chehab",
+        "email": "chehabz@hotmail.com",
+        "url": "https://github.com/chehabz"
+    },
+    "config": {
+         "currentEnvironment": "debug",
+         "SendEmailNotification" : false
+    },
+    "devDependencies": {
+        "grunt": "~0.4.5",
+        "grunt-contrib-clean": "^1.0.0"
+    },
+    "dependencies": {
+        "string-format": "0.5.0",
+        "apidoc" : "0.15.1",
+        "path": "0.12.7",
+        "fs-extra": "0.26.7",
+        "nodemailer": "2.3.0",
+        "edge": "5.0.0"
+    }
+}
