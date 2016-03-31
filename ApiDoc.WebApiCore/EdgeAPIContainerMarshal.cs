@@ -1,4 +1,4 @@
-﻿namespace APi.EdgeControllerFinder
+﻿namespace ApiDoc.WebApiCore
 {
     using System;
     using System.Collections.Generic;
@@ -7,13 +7,14 @@
     using System.Linq;
     using System.Dynamic;
     using System.Web.Http;
+    using ApiDoc.WebApiCore;
 
     /// <summary>
     /// Helper Class for marshaling webapi controllers attributes from C# web nodejs via Edge.
     /// </summary>
     public class EdgeAPIContainerMarshal
     {
-        public async Task<object> Invoke(dynamic input)
+        public async Task<object> GeneratePackages()
         {
 
             try
@@ -22,7 +23,7 @@
 
                 return  controllerInfos.Select((it) =>
                 {
-                    var attributes = it.GetCustomAttribute<APIContainerDiscriptorAttribute>();
+                    var attributes = it.GetCustomAttribute<APIControllerCustomAttribute>();
                     var router = it.GetCustomAttribute<RoutePrefixAttribute>();
 
                     dynamic module = new ExpandoObject();
@@ -71,7 +72,7 @@
         {
             foreach (Type type in assembly.GetTypes())
             {
-                if (type.GetCustomAttributes(typeof(APIContainerDiscriptorAttribute), true).Length > 0)
+                if (type.GetCustomAttributes(typeof(APIControllerCustomAttribute), true).Length > 0)
                 {
                     yield return type;
                 }

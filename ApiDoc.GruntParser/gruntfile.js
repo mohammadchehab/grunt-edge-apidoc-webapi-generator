@@ -24,9 +24,9 @@ module.exports = function(grunt) {
     var packages = {};
 
     var typeFinder = edge.func({
-        assemblyFile: 'path/to/APi.EdgeControllerFinder.dll',
-        typeName: 'APi.EdgeControllerFinder.EdgeAPIContainerMarshal',
-        methodName: 'Invoke',
+        assemblyFile: '../ApiDoc.WebApiCore/bin/debug/ApiDoc.WebApiCore.dll',
+        typeName: 'ApiDoc.WebApiCore.EdgeAPIContainerMarshal',
+        methodName: 'GeneratePackages',
     });
 
     typeFinder(null, function(error, result) {
