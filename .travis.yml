@@ -3,6 +3,3 @@ solution: ApiDoc.WebApiGenerator.sln
 
 install:
   - nuget restore ApiDoc.WebApiGenerator.sln
-
-script:
-  - xbuild ApiDoc.WebApiGenerator.sln
