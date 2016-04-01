@@ -2,4 +2,8 @@ language: csharp
 solution: ApiDoc.WebApiGenerator.sln
 
 install:
+  - sudo apt-get install mono-devel mono-gmcs nunit-console
   - nuget restore ApiDoc.WebApiGenerator.sln
+ 
+script:
+  - xbuild ApiDoc.WebApiGenerator.sln
