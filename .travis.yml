@@ -1,2 +1,3 @@
 language: csharp
 solution: ApiDoc.WebApiGenerator.sln
+install: make install
