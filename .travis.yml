@@ -1,3 +1,8 @@
 language: csharp
 solution: ApiDoc.WebApiGenerator.sln
-install: make install
+
+install:
+  - nuget restore ApiDoc.WebApiGenerator.sln
+
+script:
+  - xbuild ApiDoc.WebApiGenerator.sln
